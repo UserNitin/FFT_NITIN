@@ -6,9 +6,76 @@
         h1{
             text-align: center;
         }
+        div{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        form{
+            border: 2px solid black;
+            margin-left: 36%;
+            margin-top:100px;
+            width:400px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgb(0,0,0);
+        }
+        label{
+            display: inline-block;
+            width: 85px;
+        }
+        textarea{
+            vertical-align: top;
+            width: 300px;
+        }
+        #tex{
+            width:300px
+        }
+        #button{
+            width: 100px;
+            height: 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            box-shadow: 0px 0px 10px rgb(0,0,0);
+        }
         </style>
     </head>
     <body>
-        <h1>Student Registration Form</h1>
+        <form>
+            <h1>Student Registration Form</h1>
+            <label for="regNo">Reg No.:</label>
+            <input type="number" id="tex" placeholder="Enter your Reg ID"><br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="tex" placeholder="Enter your name"><br><br>
+            <label for="Gender">Gender:</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female<br><br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="tex" placeholder="Enter your date of birth"><br><br>
+            <label for="email" PLACEHOLDER>Email:</label>
+            <input type="email" id="tex" placeholder="Enter your email"><br><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="tex" placeholder="Enter your phone number"><br><br>
+            <label for="department">Department:</label>
+            <input type="text" id="tex" placeholder="Enter your Department"><br><br>
+            <label for="course">Course:</label>
+            <input type="text" id="tex" placeholder="Enter your Course"><br><br>
+            <label for="Section">Section:</label>
+            <input type="text" id="tex" placeholder="Enter your Section"><br><br>
+            <label for="college">College:</label>
+            <input type="text" id="tex" placeholder="Enter your College"><br><br>
+            <label for="address">Address:</label>
+            <textarea id="i10" placeholder="Enter your address"></textarea><br><br>
+            <label for="file">Upload Resume:</label>
+            <input type="file" id="i11" ><br><br>
+            <div>
+            <input type="submit" value="Submit"id="button">
+            <input type="reset" value="Reset"id="button">
+            </div>
+        </form>
     </body>
 </html>

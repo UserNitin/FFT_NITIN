@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Login page</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        #fullscreen{
+            display:flex;
+            height:100vh;
+        }
+        #image_panel{
+            border-right:1px solid gray;
+            width:60vw;
+        }
+        #login_panel{
+            text-align:center;
+            width:40vw;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        h1{
+            padding-top:25vh;
+            color:rgb(12, 67, 231)
+        }
+        h2{
+            text-align:left;
+            padding-left:40px;
+            margin-top:30px;
+        }
+        label{
+            display:block;
+            text-align:left;
+            padding-left:18px;
+            font-size:20px;
+        }
+        form{
+            border-radius:25px;
+            margin: 0px 20px 20px 20px;
+        }
+        input[type="text"], input[type="password"]{
+            width:95%;
+            height: 60px;
+            border:2px solid gray;
+            border-radius: 15px;
+            margin:10px 0px 10px 0px;
+            font-size:20px;
+            padding-left:10px;
+        }
+        input,[type="button"]{
+            width:95%;
+            height:50px;
+            border-radius: 25px;
+            margin:10px 0px 10px 0px;
+            font-size:20px;
+            border:none;
+            background:white;
+        }
+        input[type="submit"]{
+            width:95%;
+            height:50px;
+            border:1px solid rgb(12, 67, 231);
+            border-radius: 25px;
+            margin:10px 0px 10px 0px;
+            background-color: rgb(12, 67, 231);
+            color:white;
+            font-size:20px;
+        }
+        #Create_account{
+            border: 1px solid rgb(12, 67, 231);
+            background-color: white;
+        }
+        input[type="submit"]:hover,input[type="button"]:hover,#Create_account:hover{
+            background-color: #0400ff;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div id="fullscreen">
+        <div id="image_panel"></div>
+        <div id="login_panel">
+            <h1>Facebook</h1>
+            <h2>Log In to Facebook</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" >
+                <br><br>
+                <label for="Password">Password:</label>
+                <input type="password" >
+                <br><br>
+                <input type="submit" value="Login"><br>
+                <input type="button" value="Forget Password"><br>
+                <br><br>
+                <input type="button" value="Create new account" id="Create_account">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

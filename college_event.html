@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alliance University | Innovation Summit 2026</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        font-family:arial;
+        background-image:url("alliance-university2.jpg");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+    }
+    nav{
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        background:rgb(33,77,220);
+        padding:5px;
+    }
+    .logo{
+        display:flex;
+        align-items:center;
+        height:70px;
+    }
+    .logo img{
+        height:50px;
+        width:50px;
+        margin:10px;
+    }
+    .logo span{
+        color:white;
+        font-size:25px;
+    }
+    ul{
+        display:flex;
+    }
+    li{
+        list-style:none;
+        margin:0 15px;
+    }
+    a{
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+    }
+    a:hover{
+        text-decoration:underline;
+    }
+    .hero{
+        display:flex;
+        justify-content:center;
+    }
+    .hero-content{
+        width:78%;
+        height:500px;
+        background-color:rgba(20,70,235,0.7);
+        text-align:center;
+        color:white;
+        padding-top:150px;
+    }
+    .hero-content h1{
+        font-size:50px;
+        margin-bottom:20px;
+    }
+    .hero-content p{
+        font-size:20px;
+        margin:10px;
+    }
+    .btn{
+        display:inline-block;
+        background-color:white;
+        color:rgb(33,77,220);
+        padding:12px 25px;
+        margin-top:20px;
+        border-radius:5px;
+        text-decoration:none;
+    }
+    .btn:hover{
+        background-color:#ddd;
+    }
+    section{
+        width:78%;
+        margin:30px auto;
+        padding:40px 20px;
+        background-color:rgba(255,255,255,0.95);
+    }
+    .section-title{
+        text-align:center;
+        color:rgb(33,77,220);
+        font-size:32px;
+        margin-bottom:30px;
+    }
+    .details{
+        display:flex;
+        justify-content:center;
+        gap:20px;
+    }
+    .card{
+        background:white;
+        border:1px solid #ccc;
+        padding:25px;
+        text-align:center;
+        flex:1;
+        box-shadow:0 2px 5px #ccc;
+        border-radius:5px;
+    }
+    .card h3{
+        color:rgb(33,77,220);
+        margin-bottom:10px;
+    }
+    .schedule{
+        width:100%;
+        border-collapse:collapse;
+        background:white;
+    }
+    .schedule th{
+        background:rgb(33,77,220);
+        color:white;
+    }
+    .schedule th,
+    .schedule td{
+        border:1px solid #ccc;
+        padding:15px;
+        text-align:center;
+    }
+    .speakers{
+        display:flex;
+        gap:20px;
+    }
+    .speaker-card{
+        flex:1;
+    }
+    .speaker-image{
+        height:100px;
+        width:100px;
+        background-color:rgb(33,77,220);
+        color:white;
+        border-radius:50%;
+        margin:auto;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:25px;
+        margin-bottom:15px;
+    }
+    .registration form{
+        width:70%;
+        margin:auto;
+    }
+    .form-group{
+        margin-bottom:20px;
+    }
+    .form-group label{
+        display:block;
+        margin-bottom:7px;
+        font-weight:bold;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        width:100%;
+        padding:12px;
+        border:1px solid #ccc;
+        border-radius:5px;
+        font-size:16px;
+    }
+    .form-group textarea{
+        height:100px;
+    }
+    .registration .btn{
+        background-color:rgb(33,77,220);
+        color:white;
+        border:0;
+    }
+    .contact-grid{
+        display:flex;
+        gap:20px;
+    }
+    .contact-grid .card{
+        flex:1;
+    }
+
+    @media(max-width:900px){
+        nav{
+            flex-direction:column;
+        }
+        ul{
+            margin:10px;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+        li{
+            margin:10px;
+        }
+        .hero-content{
+            width:90%;
+        }
+        section{
+            width:90%;
+        }
+        .details{
+            flex-wrap:wrap;
+        }
+        .speakers{
+            flex-wrap:wrap;
+        }
+        .contact-grid{
+            flex-wrap:wrap;
+        }
+        .registration form{
+            width:90%;
+        }
+    }
+
+    @media(max-width:600px){
+        .logo span{
+            font-size:20px;
+        }
+        ul{
+            display:block;
+            text-align:center;
+        }
+        li{
+            margin:12px;
+        }
+        .hero-content{
+            width:100%;
+            height:450px;
+            padding-top:120px;
+        }
+        .hero-content h1{
+            font-size:35px;
+        }
+        .hero-content p{
+            font-size:17px;
+        }
+        section{
+            width:95%;
+            padding:30px 15px;
+        }
+        .section-title{
+            font-size:27px;
+        }
+        .details,
+        .speakers,
+        .contact-grid{
+            display:block;
+        }
+        .card{
+            margin-bottom:20px;
+        }
+        .registration form{
+            width:100%;
+        }
+        .schedule{
+            font-size:12px;
+        }
+        .schedule th,
+        .schedule td{
+            padding:8px 4px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images.png" alt="Alliance University logo">
+                <span>Alliance University</span>
+            </div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#speakers">Speakers</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Innovation Summit 2026</h1>
+                <p>Explore ideas, technology and creativity with inspiring minds.</p>
+                <p>15 October 2026 | Alliance University Campus</p>
+                <a href="#register" class="btn">Register Now</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2 class="section-title">Event Details</h2>
+            <div class="details">
+                <div class="card">
+                    <h3>Date</h3>
+                    <p>15 October 2026</p>
+                </div>
+                <div class="card">
+                    <h3>Venue</h3>
+                    <p>Alliance University Campus, Bengaluru</p>
+                </div>
+                <div class="card">
+                    <h3>Entry</h3>
+                    <p>Free for all registered students</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <h2 class="section-title">Event Schedule</h2>
+            <table class="schedule">
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                    <th>Venue</th>
+                </tr>
+                <tr>
+                    <td>09:00 AM</td>
+                    <td>Inauguration Ceremony</td>
+                    <td>Main Auditorium</td>
+                </tr>
+                <tr>
+                    <td>10:30 AM</td>
+                    <td>Technology Keynote</td>
+                    <td>Seminar Hall</td>
+                </tr>
+                <tr>
+                    <td>12:00 PM</td>
+                    <td>Innovation Challenge</td>
+                    <td>Innovation Lab</td>
+                </tr>
+                <tr>
+                    <td>03:00 PM</td>
+                    <td>Cultural Performances</td>
+                    <td>Open Theatre</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="speakers">
+            <h2 class="section-title">Featured Speakers</h2>
+            <div class="speakers">
+                <div class="card speaker-card">
+                    <div class="speaker-image">AR</div>
+                    <h3>Dr. Ananya Rao</h3>
+                    <p>Technology Researcher</p>
+                </div>
+                <div class="card speaker-card">
+                    <div class="speaker-image">VK</div>
+                    <h3>Vikram Kumar</h3>
+                    <p>Entrepreneur and Innovator</p>
+                </div>
+                <div class="card speaker-card">
+                    <div class="speaker-image">SP</div>
+                    <h3>Shreya Patel</h3>
+                    <p>Creative Director</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="register" class="registration">
+            <h2 class="section-title">Event Registration</h2>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" id="phone" pattern="[0-9]{10}" placeholder="10-digit number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Course / Department</label>
+                    <input type="text" id="department" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="event">Choose Activity</label>
+                    <select id="event" required>
+                        <option value="">Select an activity</option>
+                        <option>Innovation Challenge</option>
+                        <option>Technology Keynote</option>
+                        <option>Cultural Performance</option>
+                        <option>Photography Contest</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Additional Message</label>
+                    <textarea id="message" placeholder="Optional"></textarea>
+                </div>
+
+                <button class="btn" type="submit">Submit Registration</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-grid">
+                <div class="card">
+                    <h3>Email</h3>
+                    <p>events@alliance.edu.in</p>
+                </div>
+                <div class="card">
+                    <h3>Phone</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+                <div class="card">
+                    <h3>Address</h3>
+                    <p>Alliance University, Bengaluru</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

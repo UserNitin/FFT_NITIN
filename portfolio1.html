@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitin - Portfolio</title>
+  <style>
+    *{
+        margin:0;
+        padding:0;
+        font-family:Arial,sans-serif;
+    }
+    body{
+        background-color:#f7f7f7;
+        color:#222;
+        padding:20px;
+    }
+    a{
+        color:#0044cc;
+    }
+    nav{
+        background-color:white;
+        padding:15px;
+        border:1px solid #ccc;
+        margin-bottom:20px;
+    }
+    .logo{
+        font-size:20px;
+        font-weight:bold;
+        margin-bottom:15px;
+    }
+    .nav-links{
+        list-style:none;
+    }
+    .nav-links li{
+        display:inline-block;
+        margin-right:15px;
+    }
+    section{
+        background-color:white;
+        padding:20px;
+        margin-bottom:20px;
+        border:1px solid #ccc;
+    }
+    h1,h2,h3{
+        margin-bottom:10px;
+    }
+    p{
+        margin-bottom:10px;
+    }
+    .skills-grid{
+        display:flex;
+        flex-wrap:wrap;
+        gap:15px;
+        justify-content:space-evenly;
+    }
+    .skill-card{
+        width:200px;
+        border:1px solid #ddd;
+        padding:12px;
+        background-color:#fafafa;
+    }
+    .skill-card ul{
+        padding-left:20px;
+    }
+    .projects-grid{
+        display:flex;
+        flex-wrap:wrap;
+        gap:15px;
+        justify-content:space-evenly;
+    }
+    .project-card{
+        width:250px;
+        border:1px solid #ddd;
+        padding:15px;
+        background-color:#fafafa;
+    }
+    .project-card ul{
+        padding-left:20px;
+        margin-bottom:10px;
+    }
+    .contact-form{
+        width:500px;
+        max-width:100%;
+        margin-top:15px;
+    }
+    input,textarea{
+        width:100%;
+        padding:8px;
+        border:1px solid #ccc;
+        font-size:14px;
+        margin-bottom:10px;
+    }
+    textarea{
+        height:80px;
+    }
+    button{
+        padding:8px 15px;
+        background-color:#0044cc;
+        color:white;
+        border:none;
+        cursor:pointer;
+    }
+    button:hover{
+        background-color:#003399;
+    }
+    section{
+      animation: fadeUp 0.7s ease both;
+      scroll-margin-top:20px;
+    }
+    .skill-card,
+    .project-card{
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .skill-card:hover,
+    .project-card:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+    }
+    .logo{
+      transition: transform 0.25s ease;
+    }
+    .logo:hover{
+      transform: scale(1.05);
+    }
+    .nav-links a{
+      transition: color 0.2s ease;
+    }
+    button{
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+    button:hover{
+      transform: translateY(-2px);
+    }
+    input,
+    textarea{
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    input:focus,
+    textarea:focus{
+      border-color:#0044cc;
+      box-shadow:0 0 4px rgba(0,68,204,0.2);
+    }
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(15px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+    @keyframes slideDown{
+      from{
+        opacity:0;
+        transform:translateY(-15px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">NITIN</div>
+    <ul class="nav-links">
+      <li><a href="#Home">Home</a></li>
+      <li><a href="#About">About</a></li>
+      <li><a href="#Skills">Skills</a></li>
+      <li><a href="#Projects">Projects</a></li>
+      <li><a href="#Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="Home">
+    <h1>Hello, I'm Nitin</h1>
+    <h2>Data Science  AI/ML Enthusiast</h2>
+    <p>Aspiring Data Scientist and AI/ML Professional currently pursuing an MCA in Data Science, with a strong foundation in Python, SQL, machine learning, data analysis, and software development. I have hands-on experience in developing and evaluating machine learning models, data preprocessing, feature engineering, LLM training, and building data-driven applications. My technical expertise includes Python, Pandas, NumPy, Scikit-learn, MySQL, Django, PyQt6, and API integration. I am passionate about applying Data Science, Artificial Intelligence, and Machine Learning to solve real-world problems and continuously developing scalable, intelligent, and data-driven solutions.</p>
+  </section>
+
+  <section id="About">
+    <h2>About Me</h2>
+    <p>I’m Nitin, a Data Science and AI/ML enthusiast currently pursuing an MCA in Data Science. I have a strong foundation in Python, SQL, machine learning, data analysis, and software development, along with hands-on experience in AI/ML projects and LLM training.</p>
+    <p>I enjoy working with data, developing machine learning solutions, and building practical applications that solve real-world problems. My experience includes data preprocessing, feature engineering, model evaluation, LLM training, API integration, and Python-based application development.</p>
+    <p>I’m continuously expanding my knowledge in Data Science, Artificial Intelligence, Machine Learning, and Data Engineering, with the goal of building scalable and intelligent solutions that create real-world impact.</p>
+  </section>
+
+  <section id="Skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Programming</h3>
+        <ul>
+          <li>Python</li>
+          <li>C / C++</li>
+          <li>Java</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Data Science  AI/ML</h3>
+        <ul>
+          <li>Machine Learning</li>
+          <li>Data Analysis</li>
+          <li>Data Preprocessing</li>
+          <li>Feature Engineering</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Web  Application Development</h3>
+        <ul>
+          <li>Django</li>
+          <li>Flask</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Tools  Platforms</h3>
+        <ul>
+          <li>PyQt6</li>
+          <li>REST API Integration</li>
+          <li>Git</li>
+          <li>GitHub</li>
+          <li>VS Code</li>
+          <li>Jupyter Notebook</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Databases</h3>
+        <ul>
+          <li>MySQL</li>
+          <li>SQLite</li>
+        </ul>
+      </div>
+
+      <div class="skill-card">
+        <h3>Core Skills</h3>
+        <ul>
+          <li>Object-Oriented Programming</li>
+          <li>Data Structures  Algorithms</li>
+          <li>Problem Solving</li>
+          <li>Collaboration</li>
+          <li>Agile</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="Projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>1. Social Media Dashboard</h3>
+        <p><strong>Technologies:</strong> Python, Django, Reddit API, Discord API</p>
+        <p>Developed a web-based dashboard that integrates third-party APIs to track and analyze social media activity in real time. The project focuses on API integration, data collection, processing, and presenting meaningful activity insights through a centralized interface.</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li>Real-time activity tracking</li>
+          <li>Reddit API integration</li>
+          <li>Discord API integration</li>
+          <li>Data analysis and visualization</li>
+        </ul>
+        <p>Django-based web application</p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/UserNitin/social-dashboard.git" target="_blank" rel="noopener noreferrer">github.com/UserNitin/social-dashboard.git</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>2. GUI-Based MySQL Database Manager</h3>
+        <p><strong>Technologies:</strong> Python, PyQt6, CustomTkinter, PyMySQL, MySQL</p>
+        <p>Built a desktop-based database management application that provides a graphical interface for interacting with MySQL databases. The application simplifies database operations through an intuitive GUI.</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li>MySQL database connection</li>
+          <li>Database and table management</li>
+          <li>CRUD operations</li>
+          <li>Graphical database interface</li>
+          <li>Python-based database interaction</li>
+        </ul>
+        <p><strong>GitHub:</strong> <a href="https://github.com/UserNitin/GUI-MySQL.git" target="_blank" rel="noopener noreferrer">github.com/UserNitin/GUI-MySQL.git</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>3. Expense Validation System</h3>
+        <p><strong>Technologies:</strong> Python, OpenCV, Regex</p>
+        <p>Developed an automated expense validation system designed to verify expense information and perform compliance checks. The project combines image processing and pattern matching to extract and validate relevant information.</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li>Expense data validation</li>
+          <li>Image processing with OpenCV</li>
+          <li>Pattern matching using Regular Expressions</li>
+          <li>Automated compliance checks</li>
+          <li>Financial reporting support</li>
+        </ul>
+        <p><strong>GitHub:</strong> <a href="https://github.com/UserNitin/Expense-validation-.git" target="_blank" rel="noopener noreferrer">github.com/UserNitin/Expense-validation-.git</a></p>
+      </div>
+
+      <div class="project-card">
+        <h3>4. Shortest Path Finder in 3D Maps</h3>
+        <p><strong>Technologies:</strong> Python, Pygame, Panda3D</p>
+        <p>Developed an interactive 3D visualization tool for finding and displaying shortest paths across 3D maps. The project combines pathfinding algorithms with graphical visualization to make route computation easier to understand.</p>
+        <p><strong>Key Features:</strong></p>
+        <ul>
+          <li>3D map visualization</li>
+          <li>Shortest-path calculation</li>
+          <li>Interactive interface</li>
+          <li>Graphical path visualization</li>
+          <li>Python-based implementation</li>
+        </ul>
+        <p><strong>GitHub:</strong> <a href="https://github.com/UserNitin/Shortest-Path-finder.git" target="_blank" rel="noopener noreferrer">github.com/UserNitin/Shortest-Path-finder.git</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:nitinsingh10227@gmail.com">nitinsingh10227@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:8839140119">8839140119</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/UserNitin" target="_blank" rel="noopener noreferrer">github.com/UserNitin</a></p>
+
+    <form class="contact-form" onsubmit="event.preventDefault();">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject" class="full-width" required>
+      <textarea placeholder="Your Message" class="full-width" required></textarea>
+      <button type="submit" class="full-width">Send Message</button>
+    </form>
+  </section>
+
+</body>
+</html>

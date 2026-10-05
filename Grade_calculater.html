@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #5bb4b0;
+        }
+        div{
+            border:0px;
+            border-radius: 20px;
+            height:fit-content;
+            width:fit-content;
+            padding: 20px;
+            display: block;
+            background-color: #22c788;
+        }
+        h1{
+            text-align: center;
+        }
+        label{
+            font-weight: bold;
+            display: block;
+            text-align: center;
+        }
+        input{
+            width:100%;
+            height:28px;
+            border-radius: 5px;
+        }
+        button{
+            width:fit-content;
+            height:28px;
+            font-size: 15px;
+            font-weight: bold;
+            background: rgb(110, 72, 128);
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Grade Calculater</h1>
+        <label for="Name">Enter Name:</label><br>
+        <input type="text" id="Name" placeholder="Enter Name" required><br><br>
+        <label for="Roll Number">Enter Roll Number:</label><br>
+        <input type="text" id="Roll Number" placeholder="Enter Roll Number" required><br><br>
+        <label for="python Marks">Enter Python Marks:</label><br>
+        <input type="number" id="python Marks" placeholder="Enter Python Marks" required><br><br>
+        <label for="java Marks">Enter Java Marks:</label><br>
+        <input type="number" id="java Marks" placeholder="Enter Java Marks" required><br><br>
+        <label for="c++ Marks">Enter C++ Marks:</label><br>
+        <input type="number" id="c++ Marks" placeholder="Enter C++ Marks" required><br><br>
+        <label for="DSA Marks">Enter DSA Marks:</label><br>
+        <input type="number" id="DSA Marks" placeholder="Enter DSA Marks" required><br><br>
+        <button onclick="calculate()">Calculate Grade</button>
+        <button onclick="reset()">Reset</button><br><br>
+        <p id="error"></p>
+        <p id="total"></p>
+        <p id="average"></p>
+        <p id="percentage"></p>
+        <p id="Grade"></p>
+        <p id="status"></p>
+    </div>
+    <script>
+        function calculate() {
+            try {
+                var pythonMarks = Number(document.getElementById("python Marks").value);
+                var javaMarks = Number(document.getElementById("java Marks").value);
+                var cPlusPlusMarks = Number(document.getElementById("c++ Marks").value);
+                var DSAMarks = Number(document.getElementById("DSA Marks").value);
+            }
+            catch (error) {
+                document.getElementById("error").innerHTML = "Please enter valid marks.";
+                return;
+            }
+            var totalMarks = pythonMarks + javaMarks + cPlusPlusMarks + DSAMarks;
+            var averageMarks = totalMarks / 4;
+            document.getElementById("average").innerHTML = "Average: " + averageMarks.toFixed(2);
+            document.getElementById("percentage").innerHTML = "Percentage: " + ((averageMarks / 100) * 100).toFixed(2) + "%";
+            if (averageMarks >= 90) {
+                document.getElementById("Grade").innerHTML = "Grade: A";
+            }
+            else if (averageMarks >= 80 && averageMarks < 90) {
+                document.getElementById("Grade").innerHTML = "Grade: B";
+            }
+            else if (averageMarks >= 70 && averageMarks < 80) {
+                document.getElementById("Grade").innerHTML = "Grade: C";
+            }
+            else if (averageMarks >= 60 && averageMarks < 70) {
+                document.getElementById("Grade").innerHTML = "Grade: D";
+            }
+            else if (averageMarks >= 50 && averageMarks < 60) {
+                document.getElementById("Grade").innerHTML = "Grade: E";
+            }
+            else {
+                document.getElementById("Grade").innerHTML = "Grade: F";
+            }
+            if (averageMarks >= 50) {
+                document.getElementById("status").innerHTML = "Status: Pass";
+            }
+            else {
+                document.getElementById("status").innerHTML = "Status: Fail";
+            }
+        }
+        function reset() {
+            document.getElementById("Name").value = "";
+            document.getElementById("Roll Number").value = "";
+            document.getElementById("python Marks").value = "";
+            document.getElementById("java Marks").value = "";
+            document.getElementById("c++ Marks").value = "";
+            document.getElementById("DSA Marks").value = "";
+            document.getElementById("error").innerHTML = "";
+            document.getElementById("total").innerHTML = "";
+            document.getElementById("average").innerHTML = "";
+            document.getElementById("percentage").innerHTML = "";
+            document.getElementById("Grade").innerHTML = "";
+            document.getElementById("status").innerHTML = "";
+        }
+    </script>
+</body>
+</html>
